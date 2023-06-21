@@ -1,0 +1,9 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export LANG=en_AU.UTF-8
+export QT_STYLE_OVERRIDE='adwaita-dark'
+export EDITOR='nvim'
+export MAKEFLAGS='-j 12'
+export PATH="$PATH:$HOME/.local/bin"
+export WINEPREFIX="$XDG_DATA_HOME/wine"
+export DXVK_CONFIG_FILE="$XDG_CONFIG_HOME/dxvk/dxvk.conf"
