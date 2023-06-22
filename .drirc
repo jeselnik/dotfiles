@@ -1,0 +1,29 @@
+<driconf>
+	<device>
+		<application name="all">
+			<option name="mesa_glthread" value="true"/>
+			<option name="vblank_mode" value="0" />
+		</application>
+
+		<application name="kitty">
+			<option name="vblank_mode" value="2"/>
+			<option name="mesa_glthread" value="false"/>
+		</application>
+
+		<application name="sway">
+			<option name="vblank_mode" value="2"/>
+			<option name="mesa_glthread" value="false"/>
+		</application>
+
+		<application name="swaybg">
+			<option name="vblank_mode" value="2"/>
+			<option name="mesa_glthread" value="false"/>
+		</application>
+		
+		<application name="swaybar">
+			<option name="vblank_mode" value="2"/>
+			<option name="mesa_glthread" value="false"/>
+		</application>
+
+	</device>
+</driconf>
