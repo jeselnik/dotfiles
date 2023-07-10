@@ -1,6 +1,6 @@
 <driconf>
     <device>
-       <application name="Default">
+       <application name="all">
         <option name="vblank_mode" value="0"/>
         <option name="mesa_glthread" value="true"/>
        </application> 
