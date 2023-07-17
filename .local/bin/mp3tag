@@ -1,0 +1,3 @@
+#!/bin/sh
+cd "$WINEPREFIX/drive_c/Program Files/Mp3tag"
+wine Mp3tag.exe

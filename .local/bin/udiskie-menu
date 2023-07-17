@@ -1,0 +1,12 @@
+#!/bin/sh
+
+choose() {
+  udiskie-info -a | bemenu
+}
+
+device=$(choose)
+
+if [ -n "$device" ]; then
+  output=$(udiskie-mount "$device")
+  notify-send "$output"
+fi

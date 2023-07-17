@@ -1,0 +1,19 @@
+#!/bin/sh
+
+export BEMENU_BACKEND='wayland'
+export BEMENU_OPTS='-i -l 3 -p "🥶👌💯" -w --no-exec'
+export BEMENU_SCALE='2'
+
+opts="\
+Logout
+Shutdown
+Reboot\
+"
+
+choice=$(printf "%s" "$opts" | bemenu)
+
+case "$choice" in
+  Logout) swaymsg exit & ;;
+  Shutdown) systemctl poweroff & ;;
+  Reboot) systemctl reboot & ;;
+esac
