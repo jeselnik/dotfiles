@@ -1,12 +1,19 @@
 #!/bin/sh
 
+. bemenu-opts
+
 choose() {
-  udiskie-info -a | bemenu
+  udiskie-info -a -o '{ui_label}' | bemenu
 }
 
-device=$(choose)
+device=$(choose | cut -f 1 -d ':')
 
 if [ -n "$device" ]; then
-  output=$(udiskie-mount "$device")
+  case "$1" in
+    mount) cmd="udiskie-mount" ;;
+    umount) cmd="udiskie-umount" ;;
+  esac
+
+  output=$($cmd "$device")
   notify-send "$output"
 fi

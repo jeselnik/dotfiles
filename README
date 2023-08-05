@@ -1,0 +1,4 @@
+cd ~/dotfiles
+stow .
+
+stow --adopt if dotfiles already exist
