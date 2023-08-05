@@ -1,0 +1,6 @@
+#!/bin/sh
+export BEMENU_BACKEND='wayland'
+export BEMENU_OPTS="--no-overlap \
+  --ignorecase \
+  --list 12 \
+  --line-height 25"

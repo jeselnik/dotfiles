@@ -1,0 +1,19 @@
+# disable dualshock 4 trackpad
+
+input 1356:1476:Sony_Computer_Entertainment_Wireless_Controller_Touchpad events disabled
+input 1356:2508:Sony_Interactive_Entertainment_Wireless_Controller_Touchpad events disabled
+
+# disable ds4 trackpad over bluetooth
+input 1356:2508:Wireless_Controller_Touchpad events disabled
+
+# general config
+input type:keyboard {
+  xkb_options caps:escape_shifted_capslock
+  xkb_numlock enable
+  repeat_delay 300
+  repeat_rate 30
+}
+
+input type:mouse {
+  accel_profile flat
+}

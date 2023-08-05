@@ -1,0 +1,16 @@
+# volume keys
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86Calculator exec playerctl play-pause
+
+# shortcuts
+bindsym $mod+shift+f exec MOZ_ENABLE_WAYLAND=1 firefox -P
+bindsym $mod+shift+s exec PRESSURE_VESSEL_SHARE_HOME=0 steam
+bindsym $mod+shift+p exec keepassxc
+bindsym $mod+shift+d exec $term -e lf
+bindsym $mod+p exec sway output DP-2 enable
+
+# tools
+bindsym ctrl+space exec makoctl dismiss
+bindsym Print exec grim

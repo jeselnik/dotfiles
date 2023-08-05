@@ -1,0 +1,5 @@
+output '*' bg `find /home/eddie/pix/wallpaper/rotation -type f | shuf -n 1` fill
+
+#class	border	background	text	indicator	child-border
+client.focused	#5e81ac #5e81ac #eceff4 #5e81ac #5e81ac
+client.unfocused #4c566a #2e3440 #eceff4 #4c566a #4c566a

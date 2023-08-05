@@ -1,9 +1,10 @@
 call plug#begin()
-  Plug 'shaunsingh/nord.nvim'
+  Plug 'oxfist/night-owl.nvim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'windwp/nvim-autopairs'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'RRethy/nvim-base16'
 call plug#end()
 
 lua << END

@@ -1,8 +1,7 @@
 #!/bin/sh
 
 export BEMENU_BACKEND='wayland'
-export BEMENU_OPTS='-i -l 3 -p "🥶👌💯" -w --no-exec'
-export BEMENU_SCALE='2'
+export BEMENU_OPTS='-i -l 3 -p "😂👌💯" -w --no-exec'
 
 opts="\
 Logout

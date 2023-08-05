@@ -1,7 +1,3 @@
 #!/bin/sh
-export BEMENU_BACKEND='wayland'
-export BEMENU_OPTS='
--i -l 12 -p "Run:" --fn "monospace 11"
-'
-
-bemenu-run -H 27 -n -m -1 --nb "#2e3440" --nf "#88c0d0" --hb "#4c566a" --hf "#d8dee9" --tb "#2e3440" --tf "#a3be8c" --fb "#3b4252"
+. bemenu-opts
+bemenu-run -H 27 -m -1 -p "Run:"

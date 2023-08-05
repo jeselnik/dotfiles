@@ -1,0 +1,4 @@
+exec gammastep -l -37.8:145 
+exec mako
+exec kanshi
+exec easyeffects --gapplication-service

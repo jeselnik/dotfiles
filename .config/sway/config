@@ -1,0 +1,7 @@
+include default
+include eyecandy
+include input
+include window-rules
+include keybinds
+include output
+include startup

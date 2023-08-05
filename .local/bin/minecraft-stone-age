@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Old, or so-called "golden age" versions of minecraft don't play nicely with
+# tiling window managers. A workaround is to maximise the window, then press
+# F11 to make it fullscreen. This script saves a single keypress by starting
+# the launcher within a gamescope compositor session. Still need to F11 though.
+export QT_QPA_PLATFORM=xcb
+export XKB_DEFAULT_OPTIONS=caps:swapescape
+gamescope -W 1920 -H 1080 -f -- prismlauncher
