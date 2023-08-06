@@ -20,4 +20,4 @@ set noshowcmd
 set nowrap
 set mouse=
 
-colorscheme base16-catppuccin-macchiato
+colorscheme base16-onedark

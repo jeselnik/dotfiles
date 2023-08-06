@@ -3,4 +3,6 @@ export BEMENU_BACKEND='wayland'
 export BEMENU_OPTS="--no-overlap \
   --ignorecase \
   --list 12 \
-  --line-height 25"
+  --line-height 25 \
+  --nb #282C34
+  --nf #61AFEF"

@@ -1,7 +1,6 @@
 #!/bin/sh
 
-export BEMENU_BACKEND='wayland'
-export BEMENU_OPTS='-i -l 3 -p "😂👌💯" -w --no-exec'
+. bemenu-opts
 
 opts="\
 Logout
@@ -9,7 +8,7 @@ Shutdown
 Reboot\
 "
 
-choice=$(printf "%s" "$opts" | bemenu)
+choice=$(printf "%s" "$opts" | bemenu -l 3 -p "😂👌💯" -w --no-exec)
 
 case "$choice" in
   Logout) swaymsg exit & ;;

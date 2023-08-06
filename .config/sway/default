@@ -157,9 +157,9 @@ bar {
     font pango:monospace medium 9
 
     colors {
-    	background #2E3440e6
-	focused_workspace #d8dee9 #5E81AC #ffffff
-	urgent_workspace #d8dee9 #BF616A #ffffff
+    	background #282c34
+      focused_workspace #d8dee9 #5E81AC #ffffff
+	    urgent_workspace #d8dee9 #BF616A #ffffff
     }
 }
 
