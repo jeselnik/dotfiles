@@ -1,4 +1,4 @@
-exec gammastep -l -37.8:145 
+exec wlsunset -l -37.8 -L 145 
 exec mako
 exec kanshi
 exec easyeffects --gapplication-service
