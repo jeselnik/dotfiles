@@ -1,8 +1,10 @@
 #!/bin/sh
 export BEMENU_BACKEND='wayland'
 export BEMENU_OPTS="--no-overlap \
+  --no-cursor \
   --ignorecase \
   --list 12 \
   --line-height 25 \
-  --nb #282C34
+  --fn 'monospace Semi-Bold 10' \
+  --nb #282C34 \
   --nf #61AFEF"

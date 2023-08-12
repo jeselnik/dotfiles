@@ -1,5 +1,4 @@
 call plug#begin()
-  Plug 'oxfist/night-owl.nvim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'windwp/nvim-autopairs'

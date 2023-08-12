@@ -14,4 +14,9 @@ compinit
 
 zstyle ':completion::complete:*' gain-privileges 1
 
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

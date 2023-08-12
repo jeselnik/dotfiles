@@ -20,4 +20,9 @@ set noshowcmd
 set nowrap
 set mouse=
 
+augroup spellCheck
+  autocmd!
+  autocmd BufRead,BufNewFile neomutt*,*.md,*.txt setlocal spell
+augroup END
+
 colorscheme base16-onedark
