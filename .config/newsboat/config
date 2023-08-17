@@ -1,0 +1,9 @@
+reload-threads 20
+
+bind-key h quit
+bind-key k up
+bind-key j down
+bind-key G end
+bind-key l open
+
+include /usr/share/doc/newsboat/contrib/colorschemes/nord

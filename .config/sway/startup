@@ -1,5 +1,2 @@
 exec mako
-exec easyeffects --gapplication-service
-exec wlsunset -l -37.8 -L 145 
-
-exec_always kanshi
+exec kanshi

@@ -1,0 +1,8 @@
+[Unit]
+Description=Day/Night Gamma Adjustment
+
+[Service]
+ExecStart=/usr/bin/wlsunset -l -37.8 -L 145
+
+[Install]
+WantedBy=default.target
