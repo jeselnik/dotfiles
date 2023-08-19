@@ -1,2 +1,0 @@
-#!/bin/sh
-webcord --ozone-platform-hint=auto --enable-webrtc-pipewire-capturer --enable-features=WaylandWindowDecorations

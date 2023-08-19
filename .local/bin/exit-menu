@@ -1,6 +1,11 @@
 #!/bin/sh
 
-. bemenu-opts
+. ~/.local/lib/bemenu-opts
+
+exitWM() {
+  dinitctl shutdown;
+  swaymsg exit
+}
 
 opts="\
 Logout
@@ -11,7 +16,7 @@ Reboot\
 choice=$(printf "%s" "$opts" | bemenu -l 3 -p "😂👌💯" -w --no-exec)
 
 case "$choice" in
-  Logout) swaymsg exit & ;;
+  Logout) exitWM & ;;
   Shutdown) systemctl poweroff & ;;
   Reboot) systemctl reboot & ;;
 esac

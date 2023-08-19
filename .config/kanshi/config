@@ -1,4 +1,4 @@
-profile {
+profile desk {
         output "Philips Consumer Electronics Company PHL 243V7 UHB1917003120" position 0,0
         output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" disable
 }

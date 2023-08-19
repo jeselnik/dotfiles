@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. bemenu-opts
+. ~/.local/lib/bemenu-opts
 
 choose() {
   udiskie-info -a -o '{ui_label}' | bemenu

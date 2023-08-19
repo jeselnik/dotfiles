@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. bemenu-opts
+. ~/.local/lib/bemenu-opts
 
 emoji=$(< ~/.local/share/emoji bemenu -p "😂👌💯" | cut -d ' ' -f 1)  
 if [ -n "$emoji" ]; then

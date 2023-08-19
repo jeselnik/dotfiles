@@ -1,5 +1,7 @@
 [theme]
-theme = "nord-dark"
+theme = "dracula"
+[theme.overrides]
+
 [icons]
 icons = "awesome6"
 
@@ -12,9 +14,22 @@ idle_bg = "#D8DEE9"
 idle_fg = "#3B4252"
 
 [[block]]
+block = "toggle"
+format = " $icon "
+command_state = "pidof wlsunset"
+command_on = "dinitctl start wlsunset"
+command_off = "dinitctl stop wlsunset"
+interval = 2
+[block.icons_overrides]
+toggle_on = "🌆"
+toggle_off = "🏙️"
+
+
+[[block]]
 block = "net"
-interval = 3
-format = " $icon ↓:$graph_down ↑:$graph_up "
+interval = 2
+icons_format = "  {icon}"
+format = "$icon ↓:$speed_down ↑:$speed_up "
 #on_click = "kitty -e nmtui"
 #interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
 #device_format = "{icon}{name}{ap}"
@@ -27,28 +42,10 @@ idle_fg = "#eceff4"
 block = "temperature"
 #collapsed = false
 interval = 10
-format = " CPU: $average "
+format = " CPU: $average"
 chip = "k10temp-pci-00c3"
 inputs = ["Tctl", "temp1_input"]
 #on_click = "kitty -e gotop"
-[block.theme_overrides]
-idle_bg = "#a3be8c"
-idle_fg = "#3b4252"
-good_bg = "#88c0d0"
-good_fg = "#3b4252"
-warning_bg = "#d08770"
-warning_fg = "#3b4252"
-critical_bg = "#bf616a"
-critical_fg = "#3b4252"
-
-[[block]]
-block = "temperature"
-#collapsed = false
-interval = 10
-format = " GPU: $average "
-chip = "amdgpu-pci-0900"
-inputs = ["edge", "temp1_input"]
-#on_click = "kitty -e nvtop"
 [block.theme_overrides]
 idle_bg = "#a3be8c"
 idle_fg = "#3b4252"
@@ -67,14 +64,15 @@ alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-format = " $icon $available free "
+icons_format = "  {icon}"
+format = "$icon $available free "
 [block.theme_overrides]
 idle_bg = "#b48ead"
 idle_fg = "#3b4252"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used/$mem_total "
+format = " $icon$mem_used/$mem_total "
 [block.theme_overrides]
 idle_bg = "#d08770"
 idle_fg = "#3b4252"

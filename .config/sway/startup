@@ -1,2 +1,2 @@
 exec mako
-exec kanshi
+exec dinit &
