@@ -11,6 +11,7 @@ bindsym $mod+shift+p exec keepassxc
 bindsym $mod+alt+f exec $term -e lf
 bindsym $mod+m exec $term -e neomutt
 bindsym $mod+p exec sway output DP-2 enable
+bindsym $mod+shift+t exec $term -e btop
 
 # tools
 bindsym ctrl+space exec makoctl dismiss

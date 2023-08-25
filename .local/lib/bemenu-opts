@@ -7,4 +7,6 @@ export BEMENU_OPTS="--no-overlap \
   --line-height 25 \
   --fn 'monospace Semi-Bold 10' \
   --nb #282C34 \
-  --nf #61AFEF"
+  --nf #61AFEF \
+  --hf #98C379 \
+  --tf #C678DD"

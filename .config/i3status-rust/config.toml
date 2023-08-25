@@ -30,6 +30,7 @@ block = "net"
 interval = 2
 icons_format = "  {icon}"
 format = "$icon ↓:$speed_down ↑:$speed_up "
+format_alt = "$device: $ipv6 $ip "
 #on_click = "kitty -e nmtui"
 #interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
 #device_format = "{icon}{name}{ap}"
