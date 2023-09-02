@@ -1,6 +1,10 @@
 [theme]
-theme = "dracula"
+theme = "plain"
 [theme.overrides]
+idle_bg = "#282c34"
+idle_fg = "#61afef"
+separator_bg = "#282c34"
+separator_fg = "#abb2bf"
 
 [icons]
 icons = "awesome6"
@@ -10,8 +14,6 @@ block = "focused_window"
 #max_width = 40
 #show_marks = "visible"
 [block.theme_overrides]
-idle_bg = "#D8DEE9"
-idle_fg = "#3B4252"
 
 [[block]]
 block = "toggle"
@@ -28,7 +30,6 @@ toggle_off = "🏙️"
 [[block]]
 block = "net"
 interval = 2
-icons_format = "  {icon}"
 format = "$icon ↓:$speed_down ↑:$speed_up "
 format_alt = "$device: $ipv6 $ip "
 #on_click = "kitty -e nmtui"
@@ -36,26 +37,16 @@ format_alt = "$device: $ipv6 $ip "
 #device_format = "{icon}{name}{ap}"
 #ap_format = "{ssid}"
 [block.theme_overrides]
-idle_bg = "#bf616a"
-idle_fg = "#eceff4"
 
 [[block]]
 block = "temperature"
 #collapsed = false
 interval = 10
-format = " CPU: $average"
+format = "CPU: $average"
 chip = "k10temp-pci-00c3"
 inputs = ["Tctl", "temp1_input"]
 #on_click = "kitty -e gotop"
 [block.theme_overrides]
-idle_bg = "#a3be8c"
-idle_fg = "#3b4252"
-good_bg = "#88c0d0"
-good_fg = "#3b4252"
-warning_bg = "#d08770"
-warning_fg = "#3b4252"
-critical_bg = "#bf616a"
-critical_fg = "#3b4252"
 
 [[block]]
 block = "disk_space"
@@ -65,18 +56,13 @@ alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-icons_format = "  {icon}"
-format = "$icon $available free "
+format = "$icon $available free"
 [block.theme_overrides]
-idle_bg = "#b48ead"
-idle_fg = "#3b4252"
 
 [[block]]
 block = "memory"
-format = " $icon$mem_used/$mem_total "
+format = "$icon$mem_used/$mem_total"
 [block.theme_overrides]
-idle_bg = "#d08770"
-idle_fg = "#3b4252"
 
 [[block]]
 block = "sound"
@@ -86,8 +72,6 @@ max_vol = 100
 [[block]]
 block = "time"
 interval = 60
-format = " $icon $timestamp.datetime(f:'%b %d, %H:%M') "
+format = "$icon $timestamp.datetime(f:'%b %d, %H:%M')"
 #on_click = "kitty -e calcurse"
 [block.theme_overrides]
-idle_bg = "#8FBCBB"
-idle_fg = "#3B4252"

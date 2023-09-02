@@ -2,7 +2,7 @@
 
 . ~/.local/lib/bemenu-opts
 
-emoji=$(< ~/.local/share/emoji bemenu -p "😂👌💯" | cut -d ' ' -f 1)  
+emoji=$(< ~/.local/share/emoji bemenu -p "✋😂🔫💯" | cut -d ' ' -f 1)  
 if [ -n "$emoji" ]; then
   wl-copy "$emoji" &&
   notify-send "$emoji copied to clipboard"

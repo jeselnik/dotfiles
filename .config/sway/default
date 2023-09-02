@@ -35,7 +35,7 @@ set $menu cust-menu
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c exec "sway reload && kanshi"
+    bindsym $mod+Shift+c exec "sway reload"
 
     bindsym $mod+Shift+e exec exit-menu
 #
