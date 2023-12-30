@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$HOME"/.local/lib/bemenu-opts
+profile=$(grep profile "$HOME"/.config/kanshi/config | cut -d " " -f 2 | bemenu -p "🖥️")
+
+if kanshictl switch "$profile"
+then
+  notify-send "Display profile changed to $profile"
+else
+  notify-send "Failed to change profile"
+fi

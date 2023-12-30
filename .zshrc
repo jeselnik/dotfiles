@@ -7,6 +7,7 @@ alias rm="rm -vr"
 
 alias p="sudo pacman"
 alias v="nvim"
+alias g="git"
 
 export PROMPT='%F{green}%n%F{reset_color}@%F{blue}%m%F{reset_color}:%~ %F{red}>%F{reset_color} '
 
