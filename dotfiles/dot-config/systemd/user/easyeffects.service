@@ -1,0 +1,9 @@
+[Unit]
+Description=PipeWire Audio Effects/Processing
+
+[Service]
+ExecStart=/usr/bin/easyeffects --gapplication-service
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=wlsunset
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/wlsunset -l 37.8 -L 145
+ExecStop=killall wlsunset
+
+[Install]
+WantedBy=sway-session.target
