@@ -1,6 +1,11 @@
 [Unit]
-Description=Day/Night Gamma Adjustment
-After=multi-user.target
+Description=wlsunset
+BindsTo=sway-session.target
 
 [Service]
-ExecStart=/usr/bin/wlsunset -l -37.8 -L 145
+Type=simple
+ExecStart=/usr/bin/wlsunset -l 37.8 -L 145
+ExecStop=killall wlsunset
+
+[Install]
+WantedBy=sway-session.target

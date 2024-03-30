@@ -25,4 +25,6 @@ augroup spellCheck
   autocmd BufRead,BufNewFile neomutt*,*.md,*.txt setlocal spell
 augroup END
 
+au FileType make setlocal ts=4 sts=4 sw=4 noet
+
 colorscheme base16-onedark

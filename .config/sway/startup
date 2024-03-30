@@ -1,2 +1,2 @@
 exec mako
-exec dinit
+exec_always systemctl --user restart sway-session.target
