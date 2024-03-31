@@ -1,0 +1,45 @@
+---
+- name: Networkd wait dropin directory
+  ansible.builtin.file:
+    state: directory
+    path: "/etc/systemd/system/systemd-networkd-wait-online.service.d/"
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Directory networkd.conf.d
+  ansible.builtin.file:
+    state: directory
+    path: "/etc/systemd/networkd.conf.d/"
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Wait for First Interface Only
+  ansible.builtin.copy:
+    src: "files/wait-first-int.conf"
+    dest: "/etc/systemd/system/systemd-networkd-wait-online.service.d/wait-first-int.conf"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: IPv6 Configuration
+  ansible.builtin.copy:
+    src: "files/10-ipv6.conf"
+    dest: "/etc/systemd/networkd.conf.d/10-ipv6.conf"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Wired Network Config
+  ansible.builtin.copy:
+    src: "files/10-enp.network"
+    dest: "/etc/systemd/network/10-enp.network"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Enable networkd
+  ansible.builtin.systemd_service:
+    name: 'systemd-networkd'
+    enabled: true

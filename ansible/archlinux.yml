@@ -1,0 +1,8 @@
+---
+- name: Arch Setup (Root)
+  hosts: localhost
+  become: true
+  roles:
+    - systemd-resolved
+    - systemd-networkd
+    - systemd-timesyncd
