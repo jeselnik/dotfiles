@@ -1,6 +1,7 @@
 [Resolve]
 DNS=fe80::be24:11ff:feac:c573%enp5s0 192.168.1.1
 FallbackDNS=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
-DNSSEC=yes
+# breaks .localdomain resolution when true, look into this l8r
+DNSSEC=false
 DNSStubListenerExtra=::1
 MulticastDNS=false

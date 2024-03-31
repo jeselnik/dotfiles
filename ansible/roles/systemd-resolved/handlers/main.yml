@@ -1,2 +1,5 @@
 ---
-# handlers file for systemd-resolved
+- name: Restart
+  ansible.builtin.systemd_service:
+    name: 'systemd-resolved'
+    state: restarted
