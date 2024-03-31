@@ -1,16 +1,23 @@
 pacman_base_pkgs:
   - avahi
   - base-devel
+  - btop
+  - compsize
   - cups
   - cups-pdf
+  - dash
+  - duperemove
   - easyeffects
+  - lm_sensors
   - mesa
+  - mlocate
   - neovim
   - p7zip
   - pipewire
   - pipewire-jack
   - pipewire-pulse
   - rsync
+  - stow
   - sudo
   - wireplumber
   - zathura

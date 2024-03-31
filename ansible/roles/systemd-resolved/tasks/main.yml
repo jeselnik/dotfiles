@@ -16,6 +16,13 @@
     mode: '0644'
   notify: Restart
 
+- name: Stub resolv.conf
+  ansible.builtin.file:
+    state: link
+    src: '/run/systemd/resolve/stub-resolv.conf'
+    dest: '/etc/resolv.conf'
+    force: true
+
 - name: Service
   ansible.builtin.systemd_service:
     name: systemd-resolved
