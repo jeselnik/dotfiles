@@ -1,7 +1,14 @@
 ---
-- name: Arch Setup (Root)
+- name: Arch Bootstrap
   hosts: localhost
   become: true
+
+  pre_tasks:
+    - name: Base Packages
+      community.general.pacman:
+        name: "{{ pacman_base_pkgs }}"
+        state: present
+
   roles:
     - systemd-resolved
     - systemd-networkd

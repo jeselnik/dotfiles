@@ -1,0 +1,20 @@
+pacman_base_pkgs:
+  - avahi
+  - base-devel
+  - cups
+  - cups-pdf
+  - easyeffects
+  - mesa
+  - neovim
+  - p7zip
+  - pipewire
+  - pipewire-jack
+  - pipewire-pulse
+  - rsync
+  - sudo
+  - wireplumber
+  - zathura
+  - zathura-djvu
+  - zathura-pdf-mupdf
+  - zsh
+  - zsh-syntax-highlighting
