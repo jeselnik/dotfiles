@@ -1,2 +1,2 @@
 #!/bin/sh
-stow --dotfiles -v --target="$HOME" .
+stow -v --target="$HOME" .
