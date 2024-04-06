@@ -10,12 +10,8 @@
         state: present
 
   roles:
+    - arch-bootstrap
+    - pacman
     - systemd-resolved
     - systemd-networkd
     - systemd-timesyncd
-
-  tasks:
-    - name: Enable SSD TRIM
-      ansible.builtin.systemd_service:
-        name: 'fstrim.timer'
-        enabled: true

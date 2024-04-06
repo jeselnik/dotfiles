@@ -1,0 +1,27 @@
+---
+- name: Enable SSD TRIM
+  ansible.builtin.systemd_service:
+    name: 'fstrim.timer'
+    enabled: true
+
+- name: Dash -> /bin/sh
+  ansible.builtin.file:
+    state: link
+    src: '/usr/bin/dash'
+    dest: '/usr/bin/sh'
+
+- name: Dash -> /bin/sh Pacman Hook
+  ansible.builtin.copy:
+    src: 'files/pacman-hooks/dash.conf'
+    dest: '/etc/pacman.d/hooks/dash.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: Storage I/O Schedulers
+  ansible.builtin.copy:
+    src: 'files/00-ioschedulers.rules'
+    dest: '/etc/udev/rules.d/00-ioschedulers.rules'
+    owner: root
+    group: root
+    mode: '0644'
