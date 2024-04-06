@@ -1,0 +1,26 @@
+---
+- name: Package pacman-contrib
+  community.general.pacman:
+    name: 'pacman-contrib'
+    state: installed
+
+- name: Directory paccache.service.d
+  ansible.builtin.file:
+    path: '/etc/systemd/system/paccache.service.d'
+    state: directory
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+
+- name: Keep one old package
+  ansible.builtin.copy:
+    dest: '/etc/systemd/system/paccache.service.d/00-execStart.conf'
+    src: 'files/00-execStart.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: Enable paccache.timer
+  ansible.builtin.systemd_service:
+    name: 'paccache.timer'
+    enabled: true
