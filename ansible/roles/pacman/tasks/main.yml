@@ -1,4 +1,36 @@
 ---
+- name: Extra Config Directory
+  ansible.builtin.file:
+    state: directory
+    dest: '/etc/pacman.d/conf/'
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+
+- name: Enable Multilib
+  community.general.ini_file:
+    path: '/etc/pacman.conf'
+    section: 'multilib'
+    option: 'Include'
+    value: '/etc/pacman.d/mirrorlist'
+    mode: '0644'
+
+- name: Custom Options
+  ansible.builtin.copy:
+    src: 'files/pacman.d/options.conf'
+    dest: '/etc/pacman.d/conf/options.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: Include Custom Options
+  community.general.ini_file:
+    path: '/etc/pacman.conf'
+    section: 'options'
+    option: 'Include'
+    value: '/etc/pacman.d/conf/options.conf'
+    mode: '0644'
+
 - name: Package pacman-contrib
   community.general.pacman:
     name: 'pacman-contrib'
