@@ -1,5 +1,5 @@
 [Unit]
-Description=Mailsync
+Description=Local IMAP Sync
 
 [Service]
 Type=oneshot

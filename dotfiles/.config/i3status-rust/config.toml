@@ -1,19 +1,17 @@
 [theme]
 theme = "native"
-#[theme.overrides]
-#idle_bg = "#282c34"
-#idle_fg = "#61afef"
-#separator_bg = "#282c34"
-#separator_fg = "#abb2bf"
 
 [icons]
 icons = "awesome6"
 
 [[block]]
 block = "focused_window"
-#max_width = 40
-#show_marks = "visible"
 [block.theme_overrides]
+
+[[block]]
+block = "music"
+format = "{💿 $combo.str(min_w:20,max_w:39,rot_interval:0.5) $prev $play $next |}"
+interface_name_exclude = ["playerctld", "firefox"]
 
 [[block]]
 block = "toggle"
@@ -30,22 +28,24 @@ toggle_off = "🏙️"
 [[block]]
 block = "net"
 interval = 2
-format = "$icon ↓:$speed_down ↑:$speed_up "
+format = "   ↓:$speed_down.eng(p:M,w:3) ↑:$speed_up.eng(p:M,w:3) "
 format_alt = "$device: $ipv6 $ip "
-#on_click = "kitty -e nmtui"
-#interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
-#device_format = "{icon}{name}{ap}"
-#ap_format = "{ssid}"
 [block.theme_overrides]
 
 [[block]]
 block = "temperature"
-#collapsed = false
 interval = 10
 format = "CPU: $average"
 chip = "k10temp-pci-00c3"
 inputs = ["Tctl", "temp1_input"]
-#on_click = "kitty -e gotop"
+[[block.click]]
+button = "left"
+cmd = "alacritty -e btop"
+[block.theme_overrides]
+
+[[block]]
+block = "memory"
+format = "$mem_used/$mem_total"
 [block.theme_overrides]
 
 [[block]]
@@ -60,18 +60,18 @@ format = "$icon $available free"
 [block.theme_overrides]
 
 [[block]]
-block = "memory"
-format = "$icon$mem_used/$mem_total"
-[block.theme_overrides]
-
-[[block]]
 block = "sound"
-#on_click = "kitty -e pulsemixer"
 max_vol = 100
+format = "$icon {$volume.eng(w:2)}"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol-qt"
+[[block.click]]
+button = "right"
+cmd = "easyeffects"
 
 [[block]]
 block = "time"
 interval = 60
-format = "$icon $timestamp.datetime(f:'%b %d, %H:%M')"
-#on_click = "kitty -e calcurse"
+format = "󰃭 $timestamp.datetime(f:'%b %d') $icon $timestamp.datetime(f:'%H:%M') "
 [block.theme_overrides]

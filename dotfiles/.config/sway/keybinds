@@ -6,7 +6,7 @@ bindsym XF86Calculator exec playerctl play-pause
 
 # shortcuts
 bindsym $mod+shift+f exec MOZ_ENABLE_WAYLAND=1 firefox -P
-bindsym $mod+shift+s exec PRESSURE_VESSEL_SHARE_HOME=0 steam
+bindsym $mod+shift+s exec PRESSURE_VESSEL_SHARE_HOME=0 steam-runtime
 bindsym $mod+shift+p exec keepassxc
 bindsym $mod+alt+f exec $term -e lf
 bindsym $mod+m exec $term -e neomutt

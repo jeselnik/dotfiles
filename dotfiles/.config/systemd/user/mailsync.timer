@@ -1,8 +1,8 @@
 [Unit]
-Description=Mailsync Timer
+Description=Local IMAP Sync Timer
 
 [Timer]
-OnBootSec=10min
+OnStartupSec=10min
 OnUnitActiveSec=10min
 
 [Install]
