@@ -18,6 +18,15 @@
     group: 'root'
     mode: '0644'
 
+- name: Allow %wheel to run sudo
+  community.general.sudoers:
+    name: 'wheel-exec'
+    group: 'wheel'
+    host: 'ALL'
+    runas: 'ALL:ALL'
+    nopassword: false
+    commands: 'ALL'
+
 - name: Storage I/O Schedulers
   ansible.builtin.copy:
     src: 'files/00-ioschedulers.rules'
