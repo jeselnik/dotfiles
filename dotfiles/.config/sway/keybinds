@@ -16,3 +16,6 @@ bindsym $mod+shift+t exec $term -e btop
 # tools
 bindsym ctrl+space exec makoctl dismiss
 bindsym Print exec grim
+
+# revert to US keymap
+bindsym $mod+Backspace input '*' xkb_layout 'us'

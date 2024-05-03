@@ -3,7 +3,6 @@
 . ~/.local/lib/bemenu-opts
 
 exitWM() {
-  dinitctl shutdown;
   swaymsg exit
 }
 

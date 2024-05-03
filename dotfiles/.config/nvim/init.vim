@@ -3,7 +3,7 @@ runtime plugins.vim
 set nocompatible
 set number
 set cursorline
-set colorcolumn=80,100
+set colorcolumn=80,100,120
 set title
 set termguicolors
 set encoding=utf-8

@@ -45,7 +45,7 @@ cmd = "alacritty -e btop"
 
 [[block]]
 block = "memory"
-format = "$mem_used/$mem_total"
+format = " $mem_used/$mem_total"
 [block.theme_overrides]
 
 [[block]]

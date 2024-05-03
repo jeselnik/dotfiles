@@ -157,9 +157,9 @@ bar {
     font pango:monospace semi-bold 9
 
     colors {
-    	background #282c34
-      focused_workspace #d8dee9 #5E81AC #ffffff
-	    urgent_workspace #d8dee9 #BF616A #ffffff
+    	background #1e2127
+      focused_workspace #abb2bf #61afef #282c34
+	    urgent_workspace #abb2bf #e06c75 #282c34
     }
 }
 

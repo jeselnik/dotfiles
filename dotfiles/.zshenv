@@ -1,4 +1,5 @@
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONF_HOME="$XDG_CONFIG_HOME"
 export XDG_DATA_HOME="$HOME/.local/share"
 export LANG=en_AU.UTF-8
 export QT_QPA_PLATFORM='wayland'

@@ -5,9 +5,10 @@ alias cp="cp -irv"
 alias mv="mv -vi"
 alias rm="rm -vr"
 
-alias p="sudo pacman"
-alias v="nvim"
 alias g="git"
+alias p="sudo pacman"
+alias scu="systemctl --user"
+alias v="nvim"
 
 export PROMPT='%F{green}%n%F{reset_color}@%F{blue}%m%F{reset_color}:%~ %F{red}>%F{reset_color} '
 
