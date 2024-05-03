@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# I listen to a bunch of Ukrainian/Belarusian/Russian language music and spotify
+# search doesn't work with transliterations.
+
+. ~/.local/lib/bemenu-opts
+
+layouts="\
+🇺🇸
+🇺🇦
+🇷🇺
+"
+choice=$(printf "%s" "$layouts" | bemenu -p "⌨️")
+cmd=(sway input '*' xkb_layout)
+
+case "$choice" in
+  "🇺🇸") "${cmd[@]}" "us" ;;
+  # 'v' needs to be 'в', 'ж' is just unnatural to me
+  "🇺🇦") "${cmd[@]}" "ua(homophonic)" ;;
+  "🇷🇺") "${cmd[@]}" "ru(phonetic_YAZHERTY)" ;;
+esac
