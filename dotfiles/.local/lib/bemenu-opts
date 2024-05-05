@@ -5,8 +5,9 @@ export BEMENU_OPTS="--no-overlap \
   --ignorecase \
   --list 12 \
   --line-height 25 \
-  --fn 'monospace Semi-Bold 10' \
+  --fn 'monospace Semi-Bold 12' \
   --nb #282C34 \
-  --nf #61AFEF \
-  --hf #98C379 \
+  --nf #61afef \
+  --hf #13232F \
+  --hb #5c6370 \
   --tf #C678DD"

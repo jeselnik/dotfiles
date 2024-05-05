@@ -56,13 +56,13 @@ alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-format = "$icon $available free"
+format = " $available free"
 [block.theme_overrides]
 
 [[block]]
 block = "sound"
 max_vol = 100
-format = "$icon {$volume.eng(w:2)}"
+format = "🔉 {$volume.eng(w:2)}"
 [[block.click]]
 button = "left"
 cmd = "pavucontrol-qt"
@@ -73,5 +73,5 @@ cmd = "easyeffects"
 [[block]]
 block = "time"
 interval = 60
-format = "󰃭 $timestamp.datetime(f:'%b %d') $icon $timestamp.datetime(f:'%H:%M') "
+format = "🗓️ $timestamp.datetime(f:'%b %d') 🕗 $timestamp.datetime(f:'%H:%M') "
 [block.theme_overrides]

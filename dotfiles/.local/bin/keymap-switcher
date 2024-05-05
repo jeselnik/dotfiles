@@ -5,17 +5,15 @@
 
 . ~/.local/lib/bemenu-opts
 
-layouts="\
-🇺🇸
-🇺🇦
-🇷🇺
-"
-choice=$(printf "%s" "$layouts" | bemenu -p "⌨️")
-cmd=(sway input '*' xkb_layout)
+declare -r cmd="sway input type:keyboard xkb_layout"
 
-case "$choice" in
-  "🇺🇸") "${cmd[@]}" "us" ;;
+declare -rA keymaps=(
+  ["🇺🇸"]="us" 
   # 'v' needs to be 'в', 'ж' is just unnatural to me
-  "🇺🇦") "${cmd[@]}" "ua(homophonic)" ;;
-  "🇷🇺") "${cmd[@]}" "ru(phonetic_YAZHERTY)" ;;
-esac
+  ["🇺🇦"]="ua(homophonic)"
+  ["🇷🇺"]="ru(phonetic_YAZHERTY)"
+)
+
+choice=$(printf "%s\n" "${!keymaps[@]}" | bemenu -p "⌨️")
+
+$cmd "${keymaps[${choice}]}" 
