@@ -4,6 +4,7 @@ alias mkdir="mkdir -pv"
 alias cp="cp -irv"
 alias mv="mv -vi"
 alias rm="rm -vr"
+alias Z="ls -la"
 
 alias g="git"
 alias p="sudo pacman"
