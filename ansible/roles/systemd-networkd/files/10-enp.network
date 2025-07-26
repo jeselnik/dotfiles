@@ -1,8 +1,14 @@
 [Match]
-Name=enp*
+Name=enp5s0
 
 [Network]
 DHCP=no
-Address=192.168.1.49/24
+Address=192.168.1.20/24
 Gateway=192.168.1.1
-Domains=localdomain
+#Address=10.0.0.12/24
+#Gateway=10.0.0.1
+UseDomains=true
+Domains=home.arpa
+
+[Link]
+RequiredForOnline=no
