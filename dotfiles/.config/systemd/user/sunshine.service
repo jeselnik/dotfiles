@@ -1,0 +1,13 @@
+[Unit]
+Description=Sunshine game streaming server
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sunshine
+ExecStop=/usr/bin/pkill -TERM -x sunshine
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=sway-session.target

@@ -10,5 +10,11 @@ Gateway=192.168.1.1
 UseDomains=true
 Domains=home.arpa
 
+[IPv6AcceptRA]
+UseDNS=false
+
+[DHCPv6]
+UseDNS=false
+
 [Link]
 RequiredForOnline=no

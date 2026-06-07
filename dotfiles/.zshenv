@@ -9,8 +9,8 @@ export EDITOR='nvim'
 export VISUAL="$EDITOR"
 export MAKEFLAGS="-j $(nproc)"
 export PATH="$PATH:$HOME/.local/bin"
+
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export DXVK_CONFIG_FILE="$XDG_CONFIG_HOME/dxvk/dxvk.conf"
-export DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1=1
-export VK_ICD_FILENAMES='/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json'
+export PROTON_USE_WAYLAND=1
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
