@@ -9,8 +9,10 @@ export EDITOR='nvim'
 export VISUAL="$EDITOR"
 export MAKEFLAGS="-j $(nproc)"
 export PATH="$PATH:$HOME/.local/bin"
-
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
+
+export MANGOHUD=1
 export DXVK_CONFIG_FILE="$XDG_CONFIG_HOME/dxvk/dxvk.conf"
 export PROTON_USE_WAYLAND=1
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+

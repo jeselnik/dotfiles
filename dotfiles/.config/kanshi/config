@@ -1,9 +1,22 @@
+output "Shenzhen KTC Technology Group H24T7 0x00000001" {
+  mode 2560x1440@180.000
+  position 0,0
+  alias $LEFT
+}
+
+output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" {
+  position 2560,0
+  alias $RIGHT
+}
+
+
 profile default {
-        output "Philips Consumer Electronics Company PHL 243V7 UHB1917003120" enable position 0,0
-        output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" disable
+  output $LEFT enable
+  output $RIGHT disable
+  exec swaymsg workspace 1
 }
 
 profile dual {
-        output "Philips Consumer Electronics Company PHL 243V7 UHB1917003120" enable position 0,0
-        output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" enable position 1920,0
+  output $LEFT enable
+  output $RIGHT enable
 }
