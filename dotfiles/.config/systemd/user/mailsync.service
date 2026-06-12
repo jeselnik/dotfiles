@@ -1,6 +1,0 @@
-[Unit]
-Description=Local IMAP Sync
-
-[Service]
-Type=oneshot
-ExecStart=/usr/local/bin/mailsync
