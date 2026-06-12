@@ -2,3 +2,5 @@ cd ~/dotfiles
 stow .
 
 stow --adopt if dotfiles already exist
+
+Config/Scripts related to headless sunshine stolen from github.com/daaaaan/sunshine-headless-sway
