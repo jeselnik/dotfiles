@@ -1,4 +1,4 @@
 #output * max_render_time 2
-output "Shenzhen KTC Technology Group H24T7 0x00000001" render_bit_depth 10
-output "Shenzhen KTC Technology Group H24T7 0x00000001" hdr off
+#output "Shenzhen KTC Technology Group H24T7 0x00000001" render_bit_depth 10
+#output "Shenzhen KTC Technology Group H24T7 0x00000001" hdr off
 
