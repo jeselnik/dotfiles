@@ -8,7 +8,7 @@ input 1356:2508:Wireless_Controller_Touchpad events disabled
 
 # general config
 input type:keyboard {
-  xkb_options caps:escape_shifted_capslock
+  xkb_options caps:escape
   xkb_numlock enable
   repeat_delay 300
   repeat_rate 30
