@@ -1,3 +1,5 @@
+set $home /home/eddie
+
 include default
 include eyecandy
 include input
