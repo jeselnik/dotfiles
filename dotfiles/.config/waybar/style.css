@@ -29,13 +29,13 @@ window#waybar {
     padding: 0 4px;
 }
 
+#window,
 #clock,
 #memory,
 #temperature,
 #disk,
 #network,
 #pulseaudio,
-#mpris,
 #custom-wlsunset,
 #tray {
     color: #abb2bf;
