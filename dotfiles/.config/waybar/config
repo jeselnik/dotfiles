@@ -83,7 +83,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "🗓️ {:%b %d} 🕗 {:%H:%M}",
+        "format": "🗓️ {:%b %d 🕗 %H:%M}",
         "tooltip": false
     },
 
