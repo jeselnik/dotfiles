@@ -1,0 +1,95 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+      "sway/workspaces"
+    ],
+    "modules-center": ["mpris"],
+    "modules-right": [
+        "sway/window",
+        "custom/wlsunset",
+        "network",
+        "temperature",
+        "memory",
+        "disk",
+        "pulseaudio",
+        "clock",
+        "tray"
+    ],
+
+    "sway/window": {
+        "max-length": 50
+    },
+
+    "mpris": {
+        "format": "💿 {title} - {artist}",
+        "format-paused": "💿 {title} - {artist}",
+        "player-icons": {
+            "default": "▶"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "ignored-players": ["firefox", "playerctld"],
+        "max-length": 39,
+        "rotate": 0,
+        "tooltip": false
+    },
+
+    "custom/wlsunset": {
+        "exec": "pidof wlsunset > /dev/null && echo '🌆' || echo '🏙️'",
+        "on-click": "pidof wlsunset > /dev/null && systemctl --user stop wlsunset || systemctl --user start wlsunset",
+        "interval": 1,
+        "format": " {} ",
+        "tooltip": false
+    },
+
+    "network": {
+        "interval": 2,
+        "format": "   ↓:{bandwidthDownBytes} ↑:{bandwidthUpBytes}",
+        "format-alt": "{ifname}: {ipaddr} {ip6addr}",
+        "tooltip": false
+    },
+
+    "temperature": {
+        "interval": 10,
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "format": "CPU: {temperatureC}°C",
+        "on-click": "alacritty -e btop",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {used:0.1f}GiB/{total:0.1f}GiB",
+        "tooltip": false
+    },
+
+    "disk": {
+        "path": "/home",
+        "interval": 20,
+        "format": " {free} free",
+        "warning": 20,
+        "critical": 10,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "max-volume": 100,
+        "format": "🔉 {volume:2}%",
+        "on-click": "pavucontrol-qt",
+        "on-click-right": "easyeffects",
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "🗓️ {:%b %d} 🕗 {:%H:%M} ",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5,
+        "max-items": 10
+    }
+}

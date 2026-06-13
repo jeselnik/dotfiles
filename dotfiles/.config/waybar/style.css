@@ -1,0 +1,49 @@
+/* Waybar style — matched to sway bar colors */
+* {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600; /* semi-bold */
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1e2127;
+    color: #abb2bf;
+}
+
+/* Focused/active workspace equivalent */
+#workspaces button.focused {
+    background-color: #61afef;
+    color: #282c34;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    background-color: #e06c75;
+    color: #282c34;
+}
+
+#workspaces button {
+    color: #abb2bf;
+    background-color: #1e2127;
+    padding: 0 4px;
+}
+
+#clock,
+#memory,
+#temperature,
+#disk,
+#network,
+#pulseaudio,
+#mpris,
+#custom-wlsunset,
+#tray {
+    color: #abb2bf;
+    padding: 0 8px;
+    margin: 0;
+    border-right: 1px solid rgba(171, 178, 191, 0.3);
+}
+
+#tray {
+    border-right: none;
+}

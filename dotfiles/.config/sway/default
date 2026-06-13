@@ -151,16 +151,20 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bar {
-    position top
-    status_command i3status-rs
-    font pango:monospace semi-bold 9
+#bar {
+#    position top
+#    status_command i3status-rs
+#    font pango:monospace semi-bold 9
+#
+#    colors {
+#    	background #1e2127
+#      focused_workspace #abb2bf #61afef #282c34
+#	    urgent_workspace #abb2bf #e06c75 #282c34
+#    }
+#}
 
-    colors {
-    	background #1e2127
-      focused_workspace #abb2bf #61afef #282c34
-	    urgent_workspace #abb2bf #e06c75 #282c34
-    }
+bar {
+  status_command waybar
 }
 
 include /etc/sway/config.d/*
