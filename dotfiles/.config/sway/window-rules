@@ -1,5 +1,5 @@
 for_window {
-  [title="pulsemixer"] floating enable
+  [app_id="pavucontrol-qt"] floating enable
   [title="Epic Games Launcher"] floating enable
   [app_id="org.prismlauncher.PrismLauncher"] floating enable
   [app_id="imv"] floating enable
