@@ -46,7 +46,7 @@
 
     "network": {
         "interval": 2,
-        "format": "   ↓:{bandwidthDownBytes} ↑:{bandwidthUpBytes}",
+        "format": "↓:{bandwidthDownBytes} ↑:{bandwidthUpBytes}",
         "format-alt": "{ifname}: {ipaddr} {ip6addr}",
         "tooltip": false
     },
@@ -60,14 +60,14 @@
     },
 
     "memory": {
-        "format": " {used:0.1f}GiB/{total:0.1f}GiB",
+        "format": "{used:0.1f}GiB/{total:0.1f}GiB",
         "tooltip": false
     },
 
     "disk": {
         "path": "/home",
         "interval": 20,
-        "format": " {free} free",
+        "format": "{free} free",
         "warning": 20,
         "critical": 10,
         "tooltip": false
@@ -83,7 +83,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "🗓️ {:%b %d} 🕗 {:%H:%M} ",
+        "format": "🗓️ {:%b %d} 🕗 {:%H:%M}",
         "tooltip": false
     },
 
