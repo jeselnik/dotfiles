@@ -5,7 +5,6 @@ BindsTo=sway-session.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/sunshine
-ExecStop=/usr/bin/pkill -TERM -x sunshine
 Restart=on-failure
 RestartSec=5
 
