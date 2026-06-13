@@ -163,10 +163,6 @@ bindsym $mod+r mode "resize"
 #    }
 #}
 
-bar {
-  status_command waybar
-}
-
 include /etc/sway/config.d/*
 
 default_border none
