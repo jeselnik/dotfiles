@@ -1,0 +1,15 @@
+#!/bin/sh
+
+displayInfo=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused)')
+displayName=$(jq -M '.name' <<< "$displayInfo")
+
+if [ $(jq -M '.adaptive_sync_status' <<< "$displayInfo") = "\"enabled\"" ] || [ $(jq -M '.allow_tearing' <<< "$displayInfo") = "true" ]
+then
+    swaymsg output "$displayName" adaptive_sync disable
+    swaymsg output "$displayName" allow_tearing no
+    notify-send "🖥️ $displayName" "VRR: Disabled\nTearing: Off"
+else
+    swaymsg output "$displayName" adaptive_sync enable
+    swaymsg output "$displayName" allow_tearing yes
+    notify-send "🖥️ $displayName" "VRR: Enabled\nTearing: On"
+fi
