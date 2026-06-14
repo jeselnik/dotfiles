@@ -1,3 +1,2 @@
 exec mako
-exec waybar
 exec_always systemctl --user restart sway-session.target
