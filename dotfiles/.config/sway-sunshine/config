@@ -12,6 +12,8 @@ output * max_render_time off
 # Dark background
 exec swaybg -c '#1a1a2e'
 
+for_window [app_id=".*"] floating enable
+
 # Input isolation: disable all physical devices, enable only Sunshine virtual inputs
 # Sunshine passthrough devices use vendor 48879 (0xBEEF), product 57005 (0xDEAD)
 input type:keyboard {
