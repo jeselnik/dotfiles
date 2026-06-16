@@ -1,5 +1,5 @@
 # Headless Sway session for Sunshine streaming
-# stolen from https://github.com/daaaaan/sunshine-headless-sway
+# stolen from https://github.com/daaaaan/sunshine-headless-sway then modified
 # No physical display needed - uses WLR_BACKENDS=headless
 
 # Default headless output - 1080p fallback, Sunshine prep commands override this
@@ -14,6 +14,14 @@ exec swaybg -c '#1a1a2e'
 
 # Input isolation: disable all physical devices, enable only Sunshine virtual inputs
 # Sunshine passthrough devices use vendor 48879 (0xBEEF), product 57005 (0xDEAD)
+input type:keyboard {
+  events disabled
+}
+
+input type:pointer {
+  events disabled
+}
+
 # input * events disabled
 # input "48879:57005:Keyboard_passthrough" events enabled
 # input "48879:57005:Mouse_passthrough" events enabled
@@ -25,6 +33,3 @@ exec swaybg -c '#1a1a2e'
 # Flat acceleration for mouse passthrough
 # input "48879:57005:Mouse_passthrough" accel_profile flat
 # input "48879:57005:Mouse_passthrough_(absolute)" accel_profile flat
-
-# Keybinding to launch a terminal (useful for debugging)
-# bindsym Mod4+Return exec foot
