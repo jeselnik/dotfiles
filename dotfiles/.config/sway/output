@@ -2,3 +2,9 @@
 #output "Shenzhen KTC Technology Group H24T7 0x00000001" render_bit_depth 10
 #output "Shenzhen KTC Technology Group H24T7 0x00000001" hdr off
 
+exec swaymsg create_output
+output HEADLESS-1 mode 1920x1080@60Hz
+output HEADLESS-1 max_render_time off
+output HEADLESS-1 allow_tearing yes
+workspace 20 output HEADLESS-1
+exec swaymsg workspace 20

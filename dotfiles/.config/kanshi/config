@@ -9,14 +9,20 @@ output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" {
   alias $RIGHT
 }
 
+output HEADLESS-1 {
+  position 4480,0
+  alias $HEADLESS
+}
 
 profile default {
   output $LEFT enable
   output $RIGHT disable
+  output $HEADLESS enable
   exec swaymsg workspace 1
 }
 
 profile dual {
   output $LEFT enable
   output $RIGHT enable
+  output $HEADLESS enable
 }
