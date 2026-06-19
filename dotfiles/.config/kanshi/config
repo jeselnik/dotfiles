@@ -10,7 +10,7 @@ output "Philips Consumer Electronics Company PHL 243V7 UHB1917003005" {
 }
 
 output HEADLESS-1 {
-  position 4480,0
+  position 9001,9001
   alias $HEADLESS
 }
 
