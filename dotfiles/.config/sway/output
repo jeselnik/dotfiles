@@ -7,16 +7,16 @@ output HEADLESS-1 mode 1920x1080@60Hz
 output HEADLESS-1 max_render_time off
 output HEADLESS-1 allow_tearing yes
 workspace 20 output HEADLESS-1
-exec swaymsg workspace 20
 
-# pin workspaces 1-10 to physical monitors
-workspace 1 output DP-2 DP-3
-workspace 2 output DP-2 DP-3
-workspace 3 output DP-2 DP-3
-workspace 4 output DP-2 DP-3
-workspace 5 output DP-2 DP-3
-workspace 6 output DP-2 DP-3
-workspace 7 output DP-2 DP-3
-workspace 8 output DP-2 DP-3
-workspace 9 output DP-2 DP-3
-workspace 10 output DP-2 DP-3
+# pin workspaces 1-10 to physical outputs so headless-1 doesn't steal any of them
+set $gpu_outputs "DP-2 DP-3"
+workspace 1 $gpu_outputs
+workspace 2 $gpu_outputs
+workspace 3 $gpu_outputs
+workspace 4 $gpu_outputs
+workspace 5 $gpu_outputs
+workspace 6 $gpu_outputs
+workspace 7 $gpu_outputs
+workspace 8 $gpu_outputs
+workspace 9 $gpu_outputs
+workspace 10 $gpu_outputs
