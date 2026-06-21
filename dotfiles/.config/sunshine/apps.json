@@ -10,7 +10,34 @@
             "auto-detach": true,
             "cmd": "",
             "detached": [
-                "sh -c \"PROTON_USE_WAYLAND=0 gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -r $SUNSHINE_CLIENT_FPS -f -e --force-grab-cursor -- steam steam://open/bigpicture\""
+                "sh -c \"PROTON_USE_WAYLAND=0 MANOGHUD=0 gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -r $SUNSHINE_CLIENT_FPS -f --force-grab-cursor -- /usr/bin/es-de\""
+            ],
+            "exclude-global-prep-cmd": false,
+            "exit-timeout": 5,
+            "image-path": "lutris.png",
+            "name": "Emulation Station",
+            "prep-cmd": [
+                {
+                    "do": "sh -c \"swaymsg output HEADLESS-1 mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@${SUNSHINE_CLIENT_FPS}Hz\"",
+                    "undo": "swaymsg output HEADLESS-1 mode 1920x1080@60Hz"
+                },
+                {
+                    "do": "swaymsg workspace 20",
+                    "undo": ""
+                },
+                {
+                    "do": "",
+                    "undo": "killall es-de"
+                }
+            ],
+            "uuid": "E1B3F279-4A12-4C3D-9E88-1234567890AB",
+            "wait-all": true
+        },
+        {
+            "auto-detach": true,
+            "cmd": "",
+            "detached": [
+                "sh -c \"PROTON_USE_WAYLAND=0 MANGOHUD=0 gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -r $SUNSHINE_CLIENT_FPS -f -e --force-grab-cursor -- steam steam://open/bigpicture\""
             ],
             "exclude-global-prep-cmd": false,
             "exit-timeout": 5,
