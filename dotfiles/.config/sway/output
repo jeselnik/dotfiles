@@ -9,7 +9,7 @@ output HEADLESS-1 allow_tearing yes
 workspace 20 output HEADLESS-1
 
 # pin workspaces 1-10 to physical outputs so headless-1 doesn't steal any of them
-set $gpu_outputs "DP-2 DP-3"
+set $gpu_outputs "DP-1 DP-2"
 workspace 1 $gpu_outputs
 workspace 2 $gpu_outputs
 workspace 3 $gpu_outputs
