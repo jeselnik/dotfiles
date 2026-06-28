@@ -2,21 +2,21 @@
 #output "Shenzhen KTC Technology Group H24T7 0x00000001" render_bit_depth 10
 #output "Shenzhen KTC Technology Group H24T7 0x00000001" hdr off
 
-exec swaymsg create_output
-output HEADLESS-1 mode 1920x1080@60Hz
-output HEADLESS-1 max_render_time off
-output HEADLESS-1 allow_tearing yes
-workspace 20 output HEADLESS-1
+#exec swaymsg create_output
+output HDMI-A-1 mode 1920x1080@60Hz
+output HDMI-A-1 max_render_time off
+output HDMI-A-1 allow_tearing yes
+workspace 20 output HDMI-A-1
 
 # pin workspaces 1-10 to physical outputs so headless-1 doesn't steal any of them
 set $gpu_outputs "DP-1 DP-2"
-workspace 1 $gpu_outputs
-workspace 2 $gpu_outputs
-workspace 3 $gpu_outputs
-workspace 4 $gpu_outputs
-workspace 5 $gpu_outputs
-workspace 6 $gpu_outputs
-workspace 7 $gpu_outputs
-workspace 8 $gpu_outputs
-workspace 9 $gpu_outputs
-workspace 10 $gpu_outputs
+workspace 1 output $gpu_outputs
+workspace 2 output $gpu_outputs
+workspace 3 output $gpu_outputs
+workspace 4 output $gpu_outputs
+workspace 5 output $gpu_outputs
+workspace 6 output $gpu_outputs
+workspace 7 output $gpu_outputs
+workspace 8 output $gpu_outputs
+workspace 9 output $gpu_outputs
+workspace 10 output $gpu_outputs

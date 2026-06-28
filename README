@@ -2,3 +2,8 @@ cd ~/dotfiles
 ./symlink.sh
 
 stow --adopt if dotfiles already exist
+
+misc:
+
+post re: virtual display trickery https://www.azdanov.dev/articles/2025/how-to-create-a-virtual-display-for-sunshine-on-arch-linux
+

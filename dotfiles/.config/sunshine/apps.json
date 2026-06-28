@@ -10,7 +10,7 @@
             "auto-detach": true,
             "cmd": "",
             "detached": [
-                "sh -c \"gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -f --force-grab-cursor -- /usr/bin/heroic\""
+                "sh -c \"gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -f --force-grab-cursor -S stretch -- /usr/bin/heroic\""
             ],
             "exclude-global-prep-cmd": false,
             "exit-timeout": 5,
@@ -18,8 +18,8 @@
             "name": "Heroic Launcher",
             "prep-cmd": [
                 {
-                    "do": "sh -c \"swaymsg output HEADLESS-1 mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@${SUNSHINE_CLIENT_FPS}Hz\"",
-                    "undo": "swaymsg output HEADLESS-1 mode 1920x1080@60Hz"
+                    "do": "sh -c \"swaymsg output HDMI-A-1 mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@60.000Hz\"",
+                    "undo": "swaymsg output HDMI-A-1 mode 1920x1080@60.000Hz"
                 },
                 {
                     "do": "swaymsg workspace 20",
@@ -33,7 +33,7 @@
             "auto-detach": true,
             "cmd": "",
             "detached": [
-                "sh -c \"gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -f -e --force-grab-cursor -- steam steam://open/bigpicture\""
+                "sh -c \"gamescope -W $SUNSHINE_CLIENT_WIDTH -H $SUNSHINE_CLIENT_HEIGHT -w $SUNSHINE_CLIENT_WIDTH -h $SUNSHINE_CLIENT_HEIGHT -f -e --force-grab-cursor -S stretch -- steam steam://open/bigpicture\""
             ],
             "exclude-global-prep-cmd": false,
             "exit-timeout": 5,
@@ -45,8 +45,8 @@
                     "undo": "steam -shutdown"
                 },
                 {
-                    "do": "sh -c \"swaymsg output HEADLESS-1 mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@${SUNSHINE_CLIENT_FPS}Hz\"",
-                    "undo": "swaymsg output HEADLESS-1 mode 1920x1080@60Hz"
+                    "do": "sh -c \"swaymsg output HDMI-A-1 mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@60.000Hz\"",
+                    "undo": "swaymsg output HDMI-A-1 mode 1920x1080@60.000Hz"
                 },
                 {
                     "do": "swaymsg workspace 20",
